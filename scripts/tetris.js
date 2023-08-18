@@ -481,12 +481,11 @@ function playStone(){
         currentStone = null //remove current stone from program (this is not the same as removing it from the board!)
 
         let fullRows = checkRows() //check if any of the rows all contain class of pile. If so, the player gets 10 points, and the row is removed. 
-
         if(fullRows.length > 0){
           setTimeout(function(){
             const messages = ["Well done! 😀", "Divine! 👼", "Awesome! 😎", "Nice! 🤯", "Smashed it! 🔥", "Super! 👍", "Nice work! 😎"]
             messageToPlayer.innerText = messages[Math.floor(Math.random() * messages.length)]
-          }, 500)
+          }, 20)
         }
 
         fullRows.forEach(function(rowIdx){

@@ -85,6 +85,7 @@ main{
 .usage-info{
   width: 4rem; 
   font-size: 0.8rem;
+  margin-top: 2rem; 
 }
 
 /* PLAYER-INFO */
@@ -237,6 +238,11 @@ main{
   }
   .controls {
     display: none;
+  }
+
+  .usage-info{
+    width: 4rem; 
+    font-size: 0.8rem;
   }
 
   /* If runningame = false, playerinfo, display = none. else display.  */

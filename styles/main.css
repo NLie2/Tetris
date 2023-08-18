@@ -71,13 +71,12 @@ main{
 }
 #left, #right, #down{
   width: 4rem; 
-  margin: 0.5rem
 }
 #left-right{
   display: flex;
   flex-direction: row;
   width: 40vh; 
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 

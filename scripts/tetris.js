@@ -319,6 +319,9 @@ const controls = document.querySelectorAll('.controls > *')
 const currentStoneInfo  = document.getElementById('currentBlock')
 const infoCells = []
 
+//Usage info
+const usageInfo = document.getElementById("info")
+console.log(usageInfo)
 
 // Generate the cells
 function generateGrid(boardWidth, container, nrOfCells, cellsArray){
@@ -425,7 +428,6 @@ function getCollumns(arr, n){
 }
 
 function playStone(){
-    console.log("play!")
     runningGame = true
     //clear existing interval 
     if(interval){
@@ -437,7 +439,7 @@ function playStone(){
       currentStone.removeStoneFromInfo() 
     }
 
-    
+    usageInfo.style.display = 'none'
     //prevent startButton from being pressed
     startButton.setAttribute('disabled', 'true') 
     startButton.style.display = 'none'

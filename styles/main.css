@@ -81,6 +81,11 @@ main{
 
 
 
+/* USAGE INFO */
+.usage-info{
+  width: 4rem; 
+  font-size: 0.8rem;
+}
 
 /* PLAYER-INFO */
 

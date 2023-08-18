@@ -682,16 +682,5 @@ function gameOver(){
 //* EVENTS
 document.addEventListener('keydown', moveStone)
 startButton.addEventListener('click', playStone)
-
-
 grid.addEventListener('touchend', rotateStoneMobile)
-
-
 controls.forEach( control => control.addEventListener('touchend', moveStoneMobile))
-
-
-
-
-//
-// document.addEventListener('ontouchend', currentStone.rotate())
-//ontouchmove

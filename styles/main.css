@@ -65,20 +65,21 @@ main{
   border: none; 
   width: 40vh; 
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 #left, #right, #down{
   width: 4rem; 
   margin: 0.5rem
 }
+#left-right{
+  display: flex;
+  width: 40vh; 
+  justify-content: space-between;
+}
 
-#left{
-  margin-right: 10vh;
-}
-#right{
-  margin-left: 10vh;
-}
+
 
 
 /* PLAYER-INFO */

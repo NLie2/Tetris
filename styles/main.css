@@ -12,11 +12,6 @@ body{
   background-color: black;
   color: white; 
 
-  /* background-color: lightblue;
-  background-color: pink;
-  background-color: floralwhite;
-  color: black;  */
-
 }
 
 
@@ -91,6 +86,11 @@ main{
   width: 4rem; 
   font-size: 0.8rem;
   margin-top: 2rem; 
+}
+
+/* THEME BUTTON */
+#theme{
+  margin-bottom: 4rem; 
 }
 
 /* PLAYER-INFO */
@@ -249,7 +249,7 @@ main{
     width: 4rem; 
     font-size: 0.8rem;
   }
-
-  /* If runningame = false, playerinfo, display = none. else display.  */
-  /* In media query, put playerinfo at same place as start button  */
+  #theme{
+    margin-bottom: 0; 
+  }
 }

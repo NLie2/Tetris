@@ -358,6 +358,7 @@ let borders = [boardTopBorder,boardBottomBorder, boardLeftBorder,boardRigthBorde
 let interval
 let score = 0
 let highscore = score 
+let speed = 1000
 
 //stone variables
 let currentStone
@@ -500,7 +501,7 @@ function playStone(){
       } 
 
 
-    }, 1000)
+    }, speed)
   }
 
   //moveStone function responds the the left, right an down keys.

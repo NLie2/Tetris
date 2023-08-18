@@ -372,6 +372,9 @@ let curretStoneType
 let startPosition = 3
 let runningGame 
 
+let nextStoneType = chooseStone()
+console.log(nextStoneType)
+
 
 //Keycodes
 //to move stone
@@ -448,19 +451,16 @@ function playStone(){
 
     messageToPlayer.innerText = ''
 
-    //! TO DISPLAY NEXT STONE 
-    // if(nextStoneType){
-    //   currentStoneType = nextStoneType 
-    // } else{
-    //   nextStoneType = chooseStone()
-    // }
-    currentStoneType = chooseStone()
+    //to choose next stone
+    currentStoneType = nextStoneType
+    nextStoneType = chooseStone()
 
+    nextStone = new stones[nextStoneType](startPosition, nextStoneType)
     currentStone = new stones[currentStoneType](startPosition, currentStoneType)
 
     //Add current stone to board 
+    nextStone.addStoneToInfo()
     currentStone.addStone()
-    currentStone.addStoneToInfo()
 
     interval = setInterval(()=> {  
 
@@ -477,7 +477,8 @@ function playStone(){
           gameOver()
         } 
 
-        currentStone.removeStoneFromInfo()
+        nextStone.removeStoneFromInfo()
+        nextStone = null
         currentStone = null //remove current stone from program (this is not the same as removing it from the board!)
 
         let fullRows = checkRows() //check if any of the rows all contain class of pile. If so, the player gets 10 points, and the row is removed. 

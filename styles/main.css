@@ -121,14 +121,6 @@ main{
   display:flex; 
   flex-wrap: wrap; 
 }
-#nextBlock{
-  display: none; 
-  height: 10rem; 
-  width: 15rem; 
-  background-image: url("../assets/tetris_o.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
 
 .score{
   display: flex; 

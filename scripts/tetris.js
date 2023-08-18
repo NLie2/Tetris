@@ -472,7 +472,6 @@ function playStone(){
         currentStone.addToPile() 
         //if the top of the currentStone hits the top of the grid, the game is over
         redefineBorders() //the sides of the stone become the new borders of the grid once it is added to the pile.
-
         if(boardTopBorder.includes(Math.min(...currentStone.positions))){
           gameOver()
         } 

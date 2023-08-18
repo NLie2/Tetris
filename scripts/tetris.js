@@ -88,7 +88,6 @@ class Stone{
 }
 
 //7 subclasses of stone that all have a different update-rotate function
-
 class O extends Stone{
   constructor(position, name){
     super(position, name)
@@ -299,10 +298,9 @@ const stones = {
   z: Z
 }
 
-//! Display the next stone instead of the current stone in the grid on the side. 
+//! Make turning possible on all borders
 //! Add more messages to the player and display them at random 
 //! Try to make the dropping down of rows look more like a quick 'moving down'
-
 //! Add a fun sound when the game starts, but give the player the option to not hear it. 
 //! If you have time, try to figure out if the compress pile function is working in the correct way
 
@@ -443,8 +441,8 @@ function playStone(){
     //prevent startButton from being pressed
     startButton.setAttribute('disabled', 'true') 
     startButton.style.display = 'none'
+
     //Show player-info 
-    // currentStoneInfo.style.display = 'flex'; 
     currentBlock.style.display = 'flex';
     [...h3, ...h4].forEach(heading => heading.style.display = 'inline')
 
@@ -484,12 +482,9 @@ function playStone(){
 
         if(fullRows.length > 0){
           setTimeout(function(){
-            messageToPlayer.innerText = "Well done!"
+            const messages = ["Well done! 😀", "Divine! 👼", "Awesome! 😎", "Nice! 🤯", "Smashed it! 🔥", "Super! 👍", "Nice work! 😎"]
+            messageToPlayer.innerText = messages[Math.floor(Math.random() * messages.length)]
           }, 500)
-
-          setTimeout(function(){
-            messageToPlayer.innerText = "Beat your high score!"
-          }, 2000)
         }
 
         fullRows.forEach(function(rowIdx){
@@ -651,7 +646,7 @@ function checkRows() {
 
 function gameOver(){
   clearInterval(interval)
-  messageToPlayer.innerText = "Game Over!"
+  messageToPlayer.innerText = "Game Over! 💀"
   messageToPlayer.innerText 
   runningGame = false
   const beatHighScore = score > highscore
@@ -661,8 +656,7 @@ function gameOver(){
   }
 
   setTimeout(function(){
-    messageToPlayer.innerText = beatHighScore ? `New high-score ${highscore}! \n Can you do better?` : `Better luck next time! \n Beat your high-score ${highscore}`
-    // currentStoneInfo.style.display = 'none'; 
+    messageToPlayer.innerText = beatHighScore ? `New high-score ${highscore} \n Can you do better? 🤓` : `Better luck next time! \n Beat your high-score ${highscore} 💪`
     currentBlock.style.display = 'none';
     [...h3, ...h4].forEach(heading => heading.style.display = 'none')
     startButton.style.display = 'inline'

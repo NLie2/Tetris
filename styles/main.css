@@ -75,6 +75,7 @@ main{
 }
 #left-right{
   display: flex;
+  flex-direction: row;
   width: 40vh; 
   justify-content: space-between;
 }

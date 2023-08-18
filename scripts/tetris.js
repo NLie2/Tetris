@@ -687,5 +687,5 @@ function changeTheme(){
 document.addEventListener('keydown', moveStone)
 startButton.addEventListener('click', playStone)
 grid.addEventListener('touchend', rotateStoneMobile)
-controls.forEach( control => control.addEventListener('touchend', moveStoneMobile))
+controls.forEach( control => control.addEventListener('touchstart', moveStoneMobile))
 changeThemeButton.addEventListener('click', changeTheme)

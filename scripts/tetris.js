@@ -672,11 +672,15 @@ function gameOver(){
 let theme = 0
 function changeTheme(){
   const body = document.querySelector('body')
-  const themes = [["black", "white"], ["lightblue", "black"], ["pink", "black"], ["floralwhite", "darkblue"]]
+  const buttons = document.querySelectorAll('button')
+  console.log(buttons)
+  const themes = [["black", "white"], ["lightblue", "black"], ["pink", "darkblue"], ["floralwhite", "darkblue"]]
 
   theme = theme < themes.length-1 ? theme +1 : theme = 0
   body.style.backgroundColor = themes[theme][0]
   body.style.color = themes[theme][1]
+
+  buttons.forEach(button => button.style.color = theme != 0 && themes[theme][1])
 }
 
 //* EVENTS

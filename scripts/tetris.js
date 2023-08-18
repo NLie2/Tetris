@@ -68,7 +68,6 @@ class Stone{
     //!Alternative: if rotation is not eligible, skip two rotations ahead
     if(this.rotationEligible()) {
       this.updateRotations()
-
       //current rotation is an index that selects from an array of possible rotations. 
       //Not all stones have the same number of possible rotations, so we need to check that the index remains within the range of the possible rotations. 
       //With every rotation, the stone is moved one to the right. 
@@ -298,12 +297,6 @@ const stones = {
   z: Z
 }
 
-//! Make turning possible on all borders
-//! Add more messages to the player and display them at random 
-//! Try to make the dropping down of rows look more like a quick 'moving down'
-//! Add a fun sound when the game starts, but give the player the option to not hear it. 
-//! If you have time, try to figure out if the compress pile function is working in the correct way
-
 //*BOARD
 // Board variables
 const width = 8
@@ -314,6 +307,7 @@ const cells = []
 const grid = document.querySelector('.board')
 const startButton = document.querySelector('#start-game')
 const controls = document.querySelectorAll('.controls > *')
+const changeThemeButton= document.getElementById('theme')
 
 //CurrentStoneInfo
 const currentStoneInfo  = document.getElementById('currentBlock')
@@ -321,7 +315,6 @@ const infoCells = []
 
 //Usage info
 const usageInfo = document.getElementById("info")
-console.log(usageInfo)
 
 // Generate the cells
 function generateGrid(boardWidth, container, nrOfCells, cellsArray){
@@ -374,7 +367,6 @@ let startPosition = 3
 let runningGame 
 
 let nextStoneType = chooseStone()
-console.log(nextStoneType)
 
 
 //Keycodes
@@ -651,7 +643,6 @@ function gameOver(){
   messageToPlayer.innerText 
   runningGame = false
   const beatHighScore = score > highscore
-  console.log(beatHighScore)
   if (beatHighScore){
     highscore = score
   }
@@ -678,8 +669,19 @@ function gameOver(){
 
 }
 
+let theme = 0
+function changeTheme(){
+  const body = document.querySelector('body')
+  const themes = [["black", "white"], ["lightblue", "black"], ["pink", "black"], ["floralwhite", "darkblue"]]
+
+  theme = theme < themes.length-1 ? theme +1 : theme = 0
+  body.style.backgroundColor = themes[theme][0]
+  body.style.color = themes[theme][1]
+}
+
 //* EVENTS
 document.addEventListener('keydown', moveStone)
 startButton.addEventListener('click', playStone)
 grid.addEventListener('touchend', rotateStoneMobile)
 controls.forEach( control => control.addEventListener('touchend', moveStoneMobile))
+changeThemeButton.addEventListener('click', changeTheme)

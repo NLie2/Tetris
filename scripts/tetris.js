@@ -673,7 +673,6 @@ let theme = 0
 function changeTheme(){
   const body = document.querySelector('body')
   const buttons = document.querySelectorAll('button')
-  console.log(buttons)
   const themes = [["black", "white"], ["lightblue", "black"], ["pink", "darkblue"], ["floralwhite", "darkblue"]]
 
   theme = theme < themes.length-1 ? theme +1 : theme = 0

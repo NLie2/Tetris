@@ -1,4 +1,7 @@
 # Tetris game 
+
+# Play my game: https://nlie2.github.io/Tetris/
+
 ⚙️ Functionality \
     1. The player can rotate using the space bar, or tab on mobile version \
     2. Moving the stone left right, and down is done with the arrow controls\

@@ -28,6 +28,11 @@ Getting Started
     2. I used Intervals and set time out to make the game flow consistently \
     3. I made the design mobile- up 
 
+
+⏲️ Timeframe \
+This project is the first functional web-application I have ever built and I spent a good week on it. I was working alone, but sometimes asked more experienced software developers for help. 
+
+
 💪 What I am proud of \
     1. The rotations (they are different for all stones) - but once I figured out that adding stone is literally just adding a class to a cell it was alright \
     2. I worked with classes (It made working with everything a lot easier) \

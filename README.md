@@ -2,7 +2,7 @@
 
 # Play my game: https://nlie2.github.io/Tetris/
 
-Getting Started \
+Getting Started 
 
 1. Fork and clone the repository
 2. Open the page in default browser 
@@ -20,18 +20,18 @@ Getting Started \
     3. The high score is saved if the browser is not refreshed \
     4. The user can change the theme of the site \
     5. Icon and title are displayed on top \
-    6. The site is designed mobile up and can be played from your phone\
+    6. The site is designed mobile up and can be played from your phone
 
 
 ⌨️ Implementation \
     1. I worked with objects to create the current stone and the next stone \
     2. I used Intervals and set time out to make the game flow consistently \
-    3. I made the design mobile- up \
+    3. I made the design mobile- up 
 
 💪 What I am proud of \
     1. The rotations (they are different for all stones) - but once I figured out that adding stone is literally just adding a class to a cell it was alright \
     2. I worked with classes (It made working with everything a lot easier) \
-    3. The most difficult part of this project was definitely reducing and updating the borders, and making the pile of stones fall down in the right way (I am still not 100% sure if it is working exactly as its supposed to) \
+    3. The most difficult part of this project was definitely reducing and updating the borders, and making the pile of stones fall down in the right way (I am still not 100% sure if it is working exactly as its supposed to) 
 
 💥 Future improvements \
     1. Make turning possible on all borders \
